@@ -1,6 +1,5 @@
 <?php
 include 'connection.php';  
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -179,14 +178,10 @@ include 'connection.php';
                             echo "<label>Phone No</label> <input type='text' class='form-control' name='phone' value='" . $row['phone_no'] . "'/>";
                             echo "<label>Address</label> <input type='text' class='form-control' name='address' value='" . $row['address'] . "'/>";
                         }
-                    } else {
-                        $numRows = mysqli_num_rows($result);
-                        echo "Number of rows: " . $numRows . "<br>";
-                        echo "SQL Query: " . $sql;
-                    }
-                    
-?>
-
+                      } else {
+                        echo "could not fetch data";
+                      }
+                      ?>
 <!--                 
                        <div class="form-group">
               //           <label for="exampleInputName1">ID</label>
