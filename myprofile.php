@@ -168,9 +168,8 @@ include 'connection.php';
                     <form class="forms-sample">
                       <div class="form-group">
                       <?php
-                      $uname = $_SESSION['username'];
-                      $sql = "SELECT * FROM `login` WHERE `username`='$uname'";
-                      $conn=new mysqli($servername, $username, $password, $db_name, 3306);
+                      $username = $_SESSION['username'];
+                      $sql = "SELECT * FROM `login` WHERE `username`='$username'";
                       $result = $conn->query($sql);
                       if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
